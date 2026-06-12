@@ -1,0 +1,33 @@
+# React Behaviors plugin definitions for Business Affairs Subtheme.
+# These register design variant options that site editors can select
+# in the Drupal paragraph editing UI.
+
+banner_variant_info:
+  id: banner_type
+  label: 'Banner Paragraphs Type'
+  bundles:
+    - paragraphs_type|stanford_banner
+  config:
+    banner_style:
+      type: select
+      title: 'Banner style'
+      description: Select the style for displaying this banner.
+      empty_option: Default
+      options:
+        ba-wrapper--banner-quote-text: Quote text
+        ba-wrapper--banner-transparent-overlay: Transparent overlay
+
+page_title_variant_info:
+  id: page_title_type
+  label: 'Page Title Paragraph Type'
+  bundles:
+    - paragraphs_type|stanford_page_title_banner
+  config:
+    banner_style:
+      type: select
+      title: 'Page Title Banner style'
+      description: Select the style for displaying this page title banner.
+      empty_option: Default
+      options:
+        ba-wrapper--banner-transparent-overlay: Transparent overlay
+        ba-wrapper--banner-center-text: Center text overlay
