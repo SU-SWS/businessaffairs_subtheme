@@ -17,6 +17,7 @@ banner_variant_info:
         ba-wrapper--banner-quote-text: Quote text
         ba-wrapper--banner-translucent-overlay-serif: Translucent Overlay Serif
         ba-wrapper--banner-translucent-overlay-sans: Translucent Overlay Sans Serif
+        ba-wrapper--banner-translucent-overlay-wide: Translucent Overlay Wide
 
 page_title_variant_info:
   id: page_title_type
@@ -32,4 +33,5 @@ page_title_variant_info:
       options:
         ba-wrapper--banner-translucent-overlay-serif: Translucent Overlay Serif
         ba-wrapper--banner-translucent-overlay-sans: Translucent Overlay Sans Serif
+        ba-wrapper--banner-translucent-overlay-wide: Translucent Overlay Wide
         ba-wrapper--banner-center-text: Center text overlay
