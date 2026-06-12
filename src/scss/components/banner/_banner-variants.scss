@@ -1,0 +1,159 @@
+@charset 'UTF-8';
+
+// Business Affairs banner variant styles.
+//
+// Adapted from ppo_irsr_subtheme. Key difference: no min-height overrides are
+// applied here — the Stanford Sites default banner height is preserved as-is.
+//
+// Available wrapper classes (apply to the section/wrapper containing .su-hero):
+//   .ba-wrapper--banner-quote-text         — image at 40% opacity + quote marks
+//   .ba-wrapper--banner-transparent-overlay — image at 40% opacity, no quote marks
+//   .ba-wrapper--banner-center-text        — full-opacity image, centered text
+
+// ─── Shared: quote-text, transparent-overlay, and center-text ───────────────
+.ba-wrapper--banner-quote-text,
+.ba-wrapper--banner-transparent-overlay,
+.ba-wrapper--banner-center-text {
+  .su-hero {
+    display: block;
+
+    .su-hero__media {
+      min-height: auto;
+      position: absolute;
+    }
+
+    .su-hero__card {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      left: auto;
+      text-align: center;
+      max-width: unset;
+      margin: 0;
+      width: 100%;
+      bottom: unset;
+
+      .su-card__contents {
+        @include responsive-spacing('padding-top', 4);
+        @include responsive-spacing('padding-bottom', 5);
+
+        color: $su-color-white;
+        max-width: 100ch;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include grid-media-max('sm') {
+          width: 100%;
+        }
+
+        :first-child {
+          margin-top: 0;
+        }
+
+        h2,
+        h3,
+        h4,
+        .su-font-splash {
+          font-family: $su-font-serif;
+          @include responsive-spacing('margin-bottom', -1);
+        }
+
+        h2 {
+          @include type-a;
+        }
+
+        p,
+        blockquote {
+          @include type-c;
+
+          margin-right: 0;
+          margin-left: 0;
+
+          &:first-of-type {
+            &::before {
+              @include modular-spacing('margin-bottom', 1);
+
+              display: block;
+              content: open-quote;
+              rotate: 180deg;
+              font-size: 8rem;
+              transform: scaleX(-3) scaleY(2.8);
+              height: auto;
+              position: relative;
+              bottom: 5rem;
+              font-family: 'serif';
+
+              @include grid-media-max('sm') {
+                font-size: 4rem;
+                bottom: 4rem;
+                margin-bottom: 0;
+              }
+            }
+
+            &::after {
+              content: no-close-quote;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.overlay-right {
+    .su-hero__card {
+      right: 0;
+    }
+  }
+}
+
+// ─── Image transparency: quote-text and transparent-overlay ─────────────────
+.ba-wrapper--banner-quote-text,
+.ba-wrapper--banner-transparent-overlay {
+  .su-hero {
+    .su-hero__media {
+      img {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+// ─── Transparent overlay: suppress quote icon ────────────────────────────────
+.ba-wrapper--banner-transparent-overlay {
+  .su-hero {
+    .su-hero__card {
+      .su-card__contents {
+        p {
+          &:first-of-type {
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ─── Remove space after the page banner field region ────────────────────────
+.node-stanford-page-su-page-banner {
+  margin-bottom: 0;
+}
+
+// ─── Page title banner context: let the hero height remain unconstrained ─────
+.ptype-stanford-page-title-banner {
+  .ba-wrapper--banner-transparent-overlay {
+    .su-hero {
+      max-height: fit-content;
+
+      .su-hero__card {
+        .su-card__contents {
+          @include responsive-spacing('padding-top', 7);
+          @include responsive-spacing('padding-bottom', 7);
+        }
+      }
+    }
+  }
+}

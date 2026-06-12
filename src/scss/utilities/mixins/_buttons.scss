@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// Business Affairs button mixins.
+// All mixin names should be prefixed with 'ba-'.
+//
+// Example:
+// @mixin ba-button--primary {
+//   // button colors here
+//
+//   /* If you override a link color, also override the :after pseudo-element
+//   ** so Decanter icons match the link color. */
+//
+//   // @include ba--white-icons;
+//
+//   &:hover, &:focus {
+//     // hover/focus styles here
+//   }
+// }

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+//
+//  3. Component
+//
+
+// Discrete, reusable UI elements.
+// Components should not control their own positioning or layout.
+// Never apply widths or heights except to elements that natively have them.
+//
+// Naming convention:
+//   .ba-component-name
+//   .ba-component-name--variant
+//   .ba-component-name__sub-object
+
+@import 'banner/index';

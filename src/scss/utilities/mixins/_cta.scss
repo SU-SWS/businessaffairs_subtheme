@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// Business Affairs CTA and link mixins.
+// All mixin names should be prefixed with 'ba-'.
+//
+// Example:
+// @mixin ba-cta--primary {
+//   // link color styles here — include hover and focus
+//
+//   /* If you override a link color, also override the :after pseudo-element
+//   ** so Decanter icons match the link color. */
+//
+//   // @include ba--white-icons;
+// }
