@@ -2,7 +2,7 @@
 const path = require("path");
 const Webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const autoprefixer = require('autoprefixer')({ grid: true });
 const FileManagerPlugin = require('filemanager-webpack-plugin');
@@ -83,7 +83,7 @@ var webpackConfig = {
   ],
   optimization: {
     minimizer: [
-      new OptimizeCSSAssetsPlugin(),
+      new CssMinimizerPlugin(),
     ]
   }
 };
