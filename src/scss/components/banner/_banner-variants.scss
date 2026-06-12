@@ -6,13 +6,15 @@
 // applied here — the Stanford Sites default banner height is preserved as-is.
 //
 // Available wrapper classes (apply to the section/wrapper containing .su-hero):
-//   .ba-wrapper--banner-quote-text         — image at 40% opacity + quote marks
-//   .ba-wrapper--banner-transparent-overlay — image at 40% opacity, no quote marks
-//   .ba-wrapper--banner-center-text        — full-opacity image, centered text
+//   .ba-wrapper--banner-quote-text               — image at 40% opacity + quote marks
+//   .ba-wrapper--banner-translucent-overlay-serif — image at 40% opacity, no quote marks, serif font
+//   .ba-wrapper--banner-translucent-overlay-sans  — image at 40% opacity, no quote marks, sans-serif font
+//   .ba-wrapper--banner-center-text              — full-opacity image, centered text
 
-// ─── Shared: quote-text, transparent-overlay, and center-text ───────────────
+// ─── Shared: all overlay variants and center-text ────────────────────────────
 .ba-wrapper--banner-quote-text,
-.ba-wrapper--banner-transparent-overlay,
+.ba-wrapper--banner-translucent-overlay-serif,
+.ba-wrapper--banner-translucent-overlay-sans,
 .ba-wrapper--banner-center-text {
   .su-hero {
     display: block;
@@ -109,9 +111,10 @@
   }
 }
 
-// ─── Image transparency: quote-text and transparent-overlay ─────────────────
+// ─── Image transparency: quote-text and both translucent overlays ─────────────
 .ba-wrapper--banner-quote-text,
-.ba-wrapper--banner-transparent-overlay {
+.ba-wrapper--banner-translucent-overlay-serif,
+.ba-wrapper--banner-translucent-overlay-sans {
   .su-hero {
     .su-hero__media {
       img {
@@ -121,8 +124,9 @@
   }
 }
 
-// ─── Transparent overlay: suppress quote icon ────────────────────────────────
-.ba-wrapper--banner-transparent-overlay {
+// ─── Both translucent overlays: suppress quote icon ───────────────────────────
+.ba-wrapper--banner-translucent-overlay-serif,
+.ba-wrapper--banner-translucent-overlay-sans {
   .su-hero {
     .su-hero__card {
       .su-card__contents {
@@ -138,14 +142,33 @@
   }
 }
 
-// ─── Remove space after the page banner field region ────────────────────────
+// ─── Sans-serif variant: override to Source Sans 3 ───────────────────────────
+.ba-wrapper--banner-translucent-overlay-sans {
+  .su-hero {
+    .su-hero__card {
+      .su-card__contents {
+        h2,
+        h3,
+        h4,
+        .su-font-splash,
+        p,
+        blockquote {
+          font-family: $su-font-sans;
+        }
+      }
+    }
+  }
+}
+
+// ─── Remove space after the page banner field region ─────────────────────────
 .node-stanford-page-su-page-banner {
   margin-bottom: 0;
 }
 
-// ─── Page title banner context: let the hero height remain unconstrained ─────
+// ─── Page title banner context: let the hero height remain unconstrained ──────
 .ptype-stanford-page-title-banner {
-  .ba-wrapper--banner-transparent-overlay {
+  .ba-wrapper--banner-translucent-overlay-serif,
+  .ba-wrapper--banner-translucent-overlay-sans {
     .su-hero {
       max-height: fit-content;
 

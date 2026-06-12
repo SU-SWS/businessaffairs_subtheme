@@ -15,7 +15,8 @@ banner_variant_info:
       empty_option: Default
       options:
         ba-wrapper--banner-quote-text: Quote text
-        ba-wrapper--banner-transparent-overlay: Transparent overlay
+        ba-wrapper--banner-translucent-overlay-serif: Translucent Overlay Serif
+        ba-wrapper--banner-translucent-overlay-sans: Translucent Overlay Sans Serif
 
 page_title_variant_info:
   id: page_title_type
@@ -29,5 +30,6 @@ page_title_variant_info:
       description: Select the style for displaying this page title banner.
       empty_option: Default
       options:
-        ba-wrapper--banner-transparent-overlay: Transparent overlay
+        ba-wrapper--banner-translucent-overlay-serif: Translucent Overlay Serif
+        ba-wrapper--banner-translucent-overlay-sans: Translucent Overlay Sans Serif
         ba-wrapper--banner-center-text: Center text overlay
