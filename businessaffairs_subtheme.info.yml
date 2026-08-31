@@ -2,7 +2,7 @@ name: Business Affairs Subtheme
 type: theme
 description: 'Stanford Sites subtheme for Stanford Business Affairs.'
 package: Stanford
-version: 1.0.0
+version: 2.0.0
 core_version_requirement: ^9 || ^10 || ^11
 base theme: stanford_basic
 libraries:
